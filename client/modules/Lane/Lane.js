@@ -7,10 +7,10 @@ import Edit from '../../components/Edit';
 import styles from './Lane.css';
 
 const Lane = props => {
-	const { lane, laneNotes, updateLane, addNote, deleteLane, editLane } = props;
+	 const { connectDropTarget, lane, laneNotes, editLane, addNote, updateLane, deleteLane } = props;
 	const laneId = lane.id;
 
-	return (
+	return connectDropTarget(
 		<div className={ styles.Lane }>
 			<div className={ styles.LaneHeader }>
 				<div className={ styles.LaneAddNote }>

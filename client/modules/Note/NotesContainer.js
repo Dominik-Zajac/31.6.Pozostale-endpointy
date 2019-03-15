@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import Notes from './Notes';
-import { deleteNoteRequest, editNote, updateNoteRequest, createNoteRequest } from '../Note/NoteActions';
+import { deleteNoteRequest, editNote, updateNoteRequest, moveWithLane } from '../Note/NoteActions';
 
 const mapDispatchToProps = {
-	createNote: createNoteRequest,
-	deleteNote: deleteNoteRequest,
-	updateNote: updateNoteRequest,
-	editNote,
+	onValueClick: editNote,
+	onUpdate: updateNoteRequest,
+	onDelete: deleteNoteRequest,
+	moveWithLane,
 };
 
 export default connect(
